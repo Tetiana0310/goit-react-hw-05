@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
 import NotFoundPage from "./pages/NotFoundPAge/NotFoundPAge";  
 import MovieDetailsPage from "./pages/MovieDetailsPage/MovieDetailsPage";
-import MoviePage from "./pages/MoviePage?MoviePage"
+import MoviesPage from "./pages/MoviesPage/MoviesPage"
 export default function App() {
 
   return (
