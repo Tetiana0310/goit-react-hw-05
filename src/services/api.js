@@ -12,3 +12,13 @@ export const fetchFilms = async () => {
     })
     return data.results
 }
+
+export const fetchFilmById = async (movieId) => {
+  const { data } = await axios.get(`/movie/${movieId}`, {
+    headers: {
+      Authorization: apiKey,
+    },
+  });
+  return data;
+};
+
