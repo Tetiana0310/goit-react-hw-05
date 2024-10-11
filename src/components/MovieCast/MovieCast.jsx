@@ -15,7 +15,7 @@ export default function MovieCast() {
       setError(null);
       try {
         const data = await fetchFilmCast(movieId);
-        setCast(data.cast); // Ось тут ми дістаємо саме масив з акторами
+        setCast(data.cast);
       } catch (error) {
         setError(error);
       } finally {

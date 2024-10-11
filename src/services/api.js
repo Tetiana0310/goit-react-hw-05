@@ -28,6 +28,14 @@ export const fetchFilmCast = async (movieId) => {
       Authorization: apiKey,
     },
   });
-  return data
+  return data;
 }
 
+export const fetchFilmReviews = async (movieId) => {
+  const { data } = await axios.get(`movie/${movieId}/reviews`, {
+    headers: {
+      Authorization: apiKey,
+    },
+  });
+  return data;
+}
