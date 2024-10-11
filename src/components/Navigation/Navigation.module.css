@@ -1,5 +1,12 @@
+
+.wrapper {
+    display: flex;
+    gap: 20px;
+    padding-left: 30px;
+}
 .link {
     color: black;
+    text-decoration: none;
 }
 
 .active {

@@ -9,7 +9,7 @@ const Navigation = () => {
   };
 
   return (
-    <div>
+    <div className={css.wrapper}>
       <NavLink className={NavLinkClass} to="/">
         Home
       </NavLink>
