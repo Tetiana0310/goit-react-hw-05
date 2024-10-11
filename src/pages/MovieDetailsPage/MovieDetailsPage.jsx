@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useParams, useLocation, Link } from "react-router-dom";
 import { fetchFilmById } from "../../services/api";
+import css from "./MovieDetailsPage.module.css";
 
 export default function MovieDetailsPage() {
   const { movieId } = useParams();
@@ -32,41 +33,33 @@ export default function MovieDetailsPage() {
 
   const { poster_path, title, overview, release_date, vote_average, genres } =
     movie;
-
   return (
-    <div>
-      <div>
-        <Link to={back.current}>← Go back</Link>
+    <div className={css.wrapper}>
+      <Link className={css.link} to={back.current}>
+        ← Go back
+      </Link>
+      <div className={css.movieContent}>
         {poster_path && (
           <img
+            className={css.poster}
             src={`https://image.tmdb.org/t/p/w500/${poster_path}`}
             alt={title}
           />
         )}
-      </div>
-      <div>
-        <ul>
-          <li>
-            <h2>
-              {title} ({release_date})
-            </h2>
-          </li>
-          <li>
-            <p>User Score: {vote_average.toFixed(1)} %</p>
-          </li>
-          <li>
-            <p>Overview: </p>
-            <p>{overview}</p>
-          </li>
-          <li>
-            <p>Genres:</p>
-            <ul>
-              {genres.map((genre) => (
-                <li key={genre.id}>{genre.name}</li>
-              ))}
-            </ul>
-          </li>
-        </ul>
+        <div className={css.info}>
+          <h2>
+            {title} ({release_date})
+          </h2>
+          <p>User Score: {vote_average.toFixed(1)} %</p>
+          <p>Overview:</p>
+          <p>{overview}</p>
+          <p>Genres:</p>
+          <ul>
+            {genres.map((genre) => (
+              <li key={genre.id}>{genre.name}</li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );
