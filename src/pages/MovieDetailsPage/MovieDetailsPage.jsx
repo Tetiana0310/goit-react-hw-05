@@ -69,7 +69,7 @@ export default function MovieDetailsPage() {
           </div>
         </div>
         <h2>Additional information</h2>
-        <ul>
+        <ul className={css.listNav}>
           <li>
             <NavLink className={css.navLink} to="cast">
               Cast
