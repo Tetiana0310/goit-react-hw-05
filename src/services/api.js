@@ -10,5 +10,5 @@ export const fetchFilms = async () => {
     Authorization: apiKey
   }
     })
-    return data
+    return data.results
 }
