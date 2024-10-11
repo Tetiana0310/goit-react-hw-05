@@ -3,8 +3,6 @@ display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 20px;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-        width: 100%;
 }
 
 .link {
@@ -35,4 +33,11 @@ max-width: 300px;
     display: flex;
         gap: 20px;
         align-items: flex-start;
+        padding-bottom: 20px;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+         width: 100%;
+}
+
+.navLink {
+    color: black;
 }

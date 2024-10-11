@@ -22,3 +22,12 @@ export const fetchFilmById = async (movieId) => {
   return data;
 };
 
+export const fetchFilmCast = async (movieId) => {
+  const { data } = await axios.get(`/movie/${movieId}/credits`, {
+    headers: {
+      Authorization: apiKey,
+    },
+  });
+  return data
+}
+
