@@ -42,14 +42,6 @@ export default function MoviesPage() {
       {error && <p>Some problems. Please try again later</p>}
       <SearchMovie onSearch={onSearch} />
       {movies.length > 0 && <MovieList movies={movies} />}
-
-      {movies.length > 0 && (
-        <ul>
-          {movies.map((movie) => (
-            <li key={movie.id}>{movie.title}</li>
-          ))}
-        </ul>
-      )}
     </div>
   );
 }
